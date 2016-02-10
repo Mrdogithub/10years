@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/idangerous.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<script type="text/javascript">
+		var _hmt = _hmt || [];
+		//页面类型
+		var pageType = "index";
+		var phoneWidth =  parseInt(window.screen.width);
+
+		var phoneScale = phoneWidth/640;
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640,target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640,user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+<style type="text/css">
+/*/*/*	
+	 .path{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+        -webkit-stroke-dasharray: 100;
+    -webkit-stroke-dashoffset: 100;
+    animation: dash 2s ease infinite;
+    opacity: 0;
+    /* 支持chrome */
+    -webkit-animation: dash 2s ease infinite;
+    animation-direction:alternate;
+-webkit-animation-direction:alternate; /* Safari 和 Chrome */
+    }
+    @keyframes dash{
+    0%{
+   		stroke-dashoffset: 100;  这里是svg图形中素描线长度，可以使用js获取 
+   		-webkit-stroke-dashoffset: 100; 
+   		opacity: 0;
+    }
+    100%{
+		stroke-dashoffset: 0;
+		-webkit-stroke-dashoffset: 0;
+		opacity: 1;
+    }
+    }
+    /* 支持chrome浏览器 */
+    @-webkit-keyframes dash{
+    0%{
+  		stroke-dashoffset: 100;  这里是svg图形中素描线长度，可以使用js获取 
+  		-webkit-stroke-dashoffset: 100; 
+  			opacity: 0;
+    }
+    100%{
+		stroke-dashoffset: 0;
+		-webkit-stroke-dashoffset: 0;
+			opacity: 1;
+    }
+    }
+
+</style>
+	<title>IBM</title>
+	<style type="text/css">
+.sk-three-bounce {
+margin: 0 auto;
+width: 100%;
+height: 100%;
+text-align: center; 
+position: absolute;
+top: 0;
+left: 0;
+background-color: #708ED8;
+opacity: .8;
+z-index: 1000;
+}
+.sk-three-bounce .sk-child {
+position: relative;
+top: 40%;
+width: 9%;
+height: 6%;
+border-radius: 100%;
+display: inline-block;
+-webkit-animation: sk-threeBounceDelay 1.4s infinite ease-in-out both;
+animation: sk-threeBounceDelay 1.4s infinite ease-in-out both; }
+.sk-bounce1{
+	background-color: #1D69A7;
+}
+.sk-bounce2{
+	background-color: #99597B;
+}
+.sk-bounce3{
+	background-color: #F47264;
+}
+.sk-three-bounce .sk-bounce1 {
+-webkit-animation-delay: -0.32s;
+animation-delay: -0.32s; }
+.sk-three-bounce .sk-bounce2 {
+-webkit-animation-delay: -0.16s;
+animation-delay: -0.16s; }
+@-webkit-keyframes sk-threeBounceDelay {
+0%, 80%, 100% {
+-webkit-transform: scale(0);
+transform: scale(0); }
+40% {
+-webkit-transform: scale(1);
+transform: scale(1); } }
+@keyframes sk-threeBounceDelay {
+0%, 80%, 100% {
+-webkit-transform: scale(0);
+transform: scale(0); }
+40% {
+-webkit-transform: scale(1);
+transform: scale(1); } } 
+	</style>
+
+
+
+</head>
+<body>
+
+
+	<div class="swiper-container swiper-parent">
+	 <div class="swiper-wrapper">
+	
+	      <!--First Slide-->
+	       <div class="swiper-slide  swiper-no-swiping">
+			 <div class="sk-three-bounce">
+					<div class="sk-child sk-bounce1"></div>
+					<div class="sk-child sk-bounce2"></div>
+					<div class="sk-child sk-bounce3"></div>
+			</div>
+
+	       </div>
+	     
+		  <div class="swiper-slide page0">
+		  	 <p class="ibmLogo"><img src="./images/ibm-logo.png" class="logoAnimate"/></p>
+		  	 <p class="page-text-margin-top p1-title-animte" style="margin-top:10%;">2004-2015<br/>GT&I China Center</p>
+		     <h1 class="page-1-title p1-info-animate" style="margin-top:10%;">十年<br/>环球旅行记</h1>
+		     <span class="lightBox"></span>
+		     <span class="year year-2004 big">2004</span>
+			 <span class="year year-2006 small">2006</span>
+			 <span class="year year-2009 small">2009</span>
+			 <span class="year year-2010 small">2010</span>
+			 <span class="year year-2013 small">2013</span>
+			 <span class="year year-2015 big">2015</span>
+  
+		  </div>
+
+
+	      <div class="swiper-slide page1">
+	    	<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+			<h1 class="page-1-title">十年，只是一个开始</h1>
+			<p>2004-2015 GT&I China Center</p>
+		    <div class="page-content">
+		    	<div class="time-line page-time-boarder">
+		    		<p class="page1-circle page-time-line"></p>
+		    		<div class="page1-arrow">
+		    			
+		    			 <img src="./images/left-arrow.png" class="arrow-a"/>
+		    			 <img src="./images/left-arrow.png" class="arrow-b"/>
+		    			 <img src="./images/left-arrow-b.png" class="arrow-c"/>
+		    		</div>
+		    	</div>
+		  	 	<div class="profile-box-left page1-item-1">
+		    		<div class="page1-profile-left">
+						<div><img src="./images/profile.png"/></div>
+						<h3>Bill Ni</h3>
+						<p>GT&I China Center Leader</p>
+					</div>
+					<div class="page1-profile-left-background"></div>
+		    	</div>
+		  
+                  
+
+		    	
+		    	<ul class="profile-box-right-pos-1 page1-item-2">
+		    		<li class="page1-profile-right">
+						<h3>Apoorva</h3>
+						<h3>Lu Lu Wang</h3>
+						<p>ManagerGlobal Solution</p>
+					</li>
+					<li class="page1-profile-right-background"></li>
+		       </ul>
+
+			     <ul class="profile-box-right-pos-2 page1-item-3">
+		    		<li class="page1-profile-right">
+						<h3>Nick Li</h3>
+						<p>Manager Digital Sales Technology</p>
+					</li>
+					<li class="page1-profile-right-background"></li>
+			    </ul>
+
+			     <ul class="profile-box-right-pos-3 page1-item-4">
+		    		<li class="page1-profile-right">
+						<h3>Leon Dong</h3>
+						<h3>Dong Dong Hou</h3>
+						<p>Manager Private Digital Commerce</p>
+					</li>
+					<li class="page1-profile-right-background"></li>
+			    </ul>
+
+			      <ul class="profile-box-right-pos-4 page1-item-5">
+		    		<li class="page1-profile-right">
+						<h3>Raymond Zhang</h3>
+						<h3>Jackie Chen</h3>
+						  <h3>Erin You</h3>
+						<p>Manager Digital Engagement Services</p>
+					</li>
+					<li class="page1-profile-right-background"></li>
+			    </ul>
+		    </div>
+	
+	      </div>
+	      
+	    <!--Second Slide-->
+	      <div class="swiper-slide page2">
+	      		<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+	      		<h1  class="page-text-margin-top page-1-title">2004</h1>
+    			<p>一切始于12位Web Developers</p>
+    			   <div class="page-content">
+				    	<div class="time-line page-time-boarder">
+				    		<p class="page2-circle page-time-line page2-circle-color"></p>
+				    		<div class="page2-item-1 page-item-item-1"></div>
+				    		<div class="page2-item-2"></div>
+				    		<div class="page2-item-3"></div>
+				    	</div>
+				    </div>
+
+					<div class="float-section page-info-1">
+						<h2>2004年8月坐标大连</h2>
+					    <p>
+					    	12位Web Developers，结缘于亚太网页制作服务项目。
+	他们鼎力协助GBS大连中心，精心维护ibm.com亚太版块。其中，Bill、KK、Nick、Spobia、Wendy、Nicho六人，至今仍在浴血奋战。
+					    </p>
+					</div>
+
+					<div class="float-image">
+						<img src="./images/map-bg.png"/>
+						<img src="./images/map-font.png" class="map-font"/>
+						<div class="targetCircle"></div>
+						<img src="./images/flg.png" class="flg"/>
+					</div>
+
+					<div class="float-image-people">
+						<div class="group-1">
+							<span class="spobia-name">Spobia</span>
+							<span class="KK-name">KK</span>
+							<span class="wendy-name">Wendy</span>
+							<span class="nick-name">Nick</span>
+							<span class="nicho-name">Nicho</span>
+							<span class="bill-name" style="display:none;">Bill</span>
+							<span class="bill-box"><small class="bill-name-animate">Bill</small></span>
+							<img src="./images/women-font.png" class="spobia"/>
+							<img src="./images/man-front.png" class="KK small-image"/>
+							<img src="./images/man-large.png" class="bill"/>
+							<img src="./images/women-font.png" class="wendy"/>
+							<img src="./images/man-front.png" class="nick small-image"/>
+							<img src="./images/man-front.png"  class="nicho small-image"/>
+						</div>
+						<div class="group-2">
+							<img src="./images/man-back.png"/>
+							<img src="./images/man-back.png" />
+							<img src="./images/man-back.png"/>
+							<img src="./images/man-back.png"/>
+							<img src="./images/man-back.png"/>
+							<img src="./images/man-back.png"/>
+						</div>
+					</div>
+
+					<div class="page-2-item-2 page-info-2">
+						<h2>2005年2月</h2>
+					    <p>第一位网页QA猛将入伙</p>
+					</div>
+
+					<div class="page-2-item-3 page-info-3">
+						<h2>2005年4月</h2>
+					    <p>第一位WSE Modeler强势加盟</p>
+					</div>
+					
+					<div class="page-2-item-4">
+						<p>
+							然而，<span style="font-size:1.5em">大连</span><br/>无法装下他们的雄韬武略、勃勃野心
+						</p>
+					</div>
+
+	      </div>
+
+	      <!--Second Slide-->
+	      <div class="swiper-slide page3" >
+		   		<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+		   		<h1  class="page-text-margin-top page-1-title">2006</h1>
+    			<p>首次剑指全球，征战版图浮出水面</p>
+    			<div class="page-content">
+                    
+    				<div class="page3-time-line page-time-boarder">
+			    		<p class="page3-circle page-time-line"></p>
+			    		<div class="page3-item-1"></div>
+			    		<div class="page3-item-2"></div>
+				    </div>
+
+
+    				<div class="page3-float-section-info-1">
+						<h2>2006年3月</h2>
+					    <p>全球CPE迁移项目组正式成立40名实习生跃跃欲试</p>
+					</div>
+					<div class="page3-float-section-info-2">
+						<h2>2006年5月 </h2>
+					    <p>作为Web Developer，Lulu和YuHang-San分头出征，进军美日。网页制作服务首次扩张到北美和日本。同时，成都团队正式集结，与大连团队并肩作战。</p>
+					</div> 
+		
+					<div class="page3-image">
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 style="width:100%;height:300px; position:absolute;top:-80px;left:15px;" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" >
+
+<g id="chengduyuan">
+	<g>
+		<ellipse style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" cx="840.096" cy="375.694" rx="4.904" ry="4.932"/>
+	</g>
+</g>
+<g id="chengduyuan_1_">
+	<g>
+		<ellipse style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" cx="121.096" cy="331.694" rx="4.904" ry="4.932"/>
+	</g>
+</g>
+<g id="riben_yuan_1_">
+	<g>
+		<ellipse style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" cx="750.096" cy="400.694" rx="4.904" ry="4.932"/>
+	</g>
+</g>
+<path class="path" style="fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:6;" d="M799.195,361.741
+	c14.26-6.889,31.374-0.923,38.263,13.337"/>
+<path class="path"  style="fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:6;" d="M748.541,398.523
+	c3.565-21.416,23.78-35.86,45.196-32.295"/>
+<path class="path" style="fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:6;" d="M790,361.754
+	C614.062,168.701,315.479,154.851,122.425,330.79"/>
+</svg>
+
+                        <span class="jp">日本</span>
+                        <span class="cd">成都</span>
+                        <span class="bm">北美</span>
+						<img src="./images/p3-map.png"/>
+                    	<img src="./images/flg.png" class="page3-flg"/>
+					</div>
+    			</div>
+    			
+	      </div>
+
+
+
+	       <div class="swiper-slide page4">
+	       		<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+	       		<h1  class="page-text-margin-top page-1-title">2009</h1>
+    			<p>羽翼渐丰，在GDC下自立门户</p>
+    			<div class="page-content">
+    				<div class="page4-time-line page-time-boarder">
+			    		<p class="page4-circle page-time-line"></p>
+			    		<div class="page4-item-1"></div>
+			    		<div class="page4-item-2"></div>
+			    		<div class="page4-item-3"></div>
+				    </div>
+			  		<div class="page4-float-section-info-1">
+						<h2>2007年</h2>
+					    <p>从接管Project Tracking Tool的维护开始第一支应用开发团队由此诞生</p>
+					</div>
+					<div class="page4-image">
+						<img src="./images/p4-img.png"/>
+					</div>
+					<div class="page4-float-section-info-2">
+						<h2>2008年 </h2>
+					    <p>第一位文案写手Erin You加入，从此开启中英双语的文案业务。</p>
+					</div> 
+					<div class="page4-float-section-info-3">
+						<h2>2009年</h2>
+					    <p>整个团队加入ibm.com架构正式成为GDC不可或缺的BU之一</p>
+					</div> 
+				</div>
+	       </div>
+		   <div class="swiper-slide page5">
+				<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+				<h1  class="page-text-margin-top page-1-title">2010</h1>
+    			<p>全球业务步入正轨，业务多样性持续提升</p>
+    			<div class="page-content">
+					<div class="page5-time-line page-time-boarder">
+				    		<p class="page5-circle page-time-line"></p>
+				    		<div class="page5-item-1"></div>
+				    		<div class="page5-item-2"></div>
+				    		<div class="page5-item-3"></div>
+				    </div>
+	    			<div class="page5-float-section-info-1">
+							<h2>2010年</h2>
+						    <p>与美国、印度、斯洛伐克、巴西展开合作，以追日模式实现覆盖全球业务的24小时持续交付</p>
+					</div>
+					<div class="page5-image">
+						<img src="./images/p5-image-new.png"/>
+
+
+						<!---->
+						<div id="rotateDot">
+						  <div id="rond">
+						    <div id="dot"></div>
+						  </div>
+						</div>
+						<!---->
+					</div>
+					<div class="page5-float-section-info-2">
+							<h2>2011年</h2>
+						    <p>成为全球WSE移植中心，负责将全球的WSE应用从Domino平台向Websphere平台移植。</p>
+					</div>
+					<div class="page5-float-section-info-3">
+							<h2>2012年</h2>
+						    <p>建立全球营销中心，为日本和大中华区提供市场营销活动支持</p>
+					</div>
+				</div>
+	       </div>
+     
+           
+           <div class="swiper-slide page6">
+			 	<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+			 	<h1  class="page-text-margin-top page-1-title">2013</h1>
+    			<p>专注核心业务，队伍空前壮大</p>
+    			<div class="page-content">
+    				<div class="page6-time-line page-time-boarder">
+			    		<p class="page6-circle page-time-line"></p>
+			    		<div class="page6-item-1"></div>
+			    
+			    		<div class="page6-item-3"></div>
+			    	</div>
+
+			    	<div class="page6-float-section-info-1">
+						<h2>2013年</h2>
+					    <p>全球营销中心整体被并入市场营销架构第二季度，整个中心人数达到400人。</p>
+					</div>
+                    
+					<div class="page6-image">
+						<img src="./images/p6-image.png" class="p6-image-hero"/>
+						<img src="./images/p6-image-cellphone.png" class="p6-image-cellphone"/>
+						<img src="./images/p6-image-people.png" class="p6-image-people"/>
+						<img src="./images/p6-image-400.png" class="p6-image-400"/>
+						<img src="./images/p6-image-400-people.png" class="p6-image-400-people"/>
+					</div>
+					<div class="page6-float-section-info-2">
+						<h2>2014年</h2>
+					    <p>SalesConnect项目组和WASO项目组被并入BTIT/CIO架构。</p>
+					</div>	    	
+    			</div>
+	       </div>
+		   
+			<div class="swiper-slide page7">
+				<p class="ibmLogo"><img src="./images/ibm-logo.png"/></p>
+				<h1  class="page-text-margin-top page-1-title">2015</h1>
+    			<p >不断突破自我，敏捷制胜未来</p>
+    			<div class="page-content">
+					<div class="page7-time-line page-time-boarder">
+			    		<p class="page7-circle page-time-line"></p>
+			    	</div>
+
+			    	<div class="page7-float-section-info-1">
+					    <p>团队中有40名成员精通Scrum敏捷开发策略带动团队开展敏捷开发总动员</p>
+					</div>
+					<div class="page7-float-section-info-2">
+					    <p>Bluemix、Mobile、Social和Analysis等开发项目在敏捷开发的模式下实现持续交付。从而，团队与客户建立更加紧密的关系。</p>
+					</div>
+					<div class="page7-image">
+						<span class="bluemix">Bluemix</span>
+						<span class="mobile">Mobile</span>
+						<span class="social">Social</span>
+						<span class="analysis">Analysis</span>
+						<img src="./images/p7-image.png"/>
+					</div>
+    			</div>
+			</div>
+	</div>
+	    <a href="javascript:void(0);" id="left">left</a>
+        <a href="javascript:void(0);" id="right">right</a>
+<script type="text/javascript">
+
+
+	// /****启用****/
+	// $(document).ready(function(){
+	// 	// $('.page3-image').hide();
+	// 	// $('.page4-image').hide();
+	// 	// $('.page5-image').hide();
+	// 	// $('.page6-image').hide();
+	//   	var mySwiper = $('.swiper-container').swiper({
+	//     slideActiveClass : 'active',
+	//     mode:'vertical',
+	//     slideVisibleClass:'visible',
+	// 		queueEndCallbacks : true,
+	// 		speed : 500,
+ //    		paginationClickable: true,
+	// 		onSlideChangeEnd : function(){
+	// 			$('html, body').animate({scrollTop:0});
+	// 			var length = $('.swiper-slide').length-1;
+	// 			var index = $('.swiper-container .active').index() + 1;
+	// 			//隐藏左右按钮
+	// 			switch(index){
+	// 					case 0:
+	// 					break;
+	// 					case 1:
+	// 					break;
+	// 					case 2:
+	// 					break;
+	// 					case 3:
+	// 					// $('.page3-image').hide();
+	// 					break;
+	// 					case 4:
+	// 					// setTimeout(function(){
+	// 					// 	$('.page3-image').show().addClass('zoomIn animated');
+	// 					// },1300);
+	// 					// setTimeout(function(){
+	// 					// 	$('.page3-image').removeClass('zoomIn animated');
+	// 					// },2200);
+	// 					// $('.page4-image').hide();
+	// 					break;
+	// 					case 5:
+	// 					// $('.page3-image').hide();
+	// 					// $('.page5-image').hide();
+	// 					// setTimeout(function(){
+	// 					// 	$('.page4-image').show().addClass('zoomIn animated');
+	// 					// },600);
+	// 					// setTimeout(function(){
+	// 					// 	$('.page4-image').removeClass('zoomIn animated');
+	// 					// },1400);
+	// 					break;
+	// 					case 6:
+	// 					// $('.page4-image').hide();
+	// 					// $('.page6-image').hide();
+	// 					// setTimeout(function(){
+	// 					// 	$('.page5-image').show().addClass('zoomIn animated');
+	// 					// },600);
+	// 					// setTimeout(function(){
+	// 					// 	$('.page5-image').removeClass('zoomIn animated');
+	// 					// },1400);
+	// 					break;
+	// 					case 7:
+	// 					// $('.page5-image').hide();
+	// 					// setTimeout(function(){
+	// 					// 	$('.page6-image').show().addClass('zoomIn animated');
+	// 					// },600);
+	// 					// setTimeout(function(){
+	// 					// 	$('.page6-image').removeClass('zoomIn animated');
+	// 					// },1400);
+	// 					break;
+	// 					default:
+	// 					// $('.page3-image').hide();
+	// 					// $('.page4-image').hide();
+	// 					// $('.page5-image').hide();
+	// 					// $('.page6-image').hide();
+	// 					break;
+	// 				}
+
+	// 		}
+	//   });
+
+
+	//   var swiperNested1 = new Swiper('.swiper-nested',{
+	//     mode: 'horizontal',
+	//     slidesPerView: 1
+	//   })
+	// });
+</script> 			
+<script type="text/javascript">
+                    var arr = ['./images/flg.png','./images/ibm_logo.jpg','./images/ibm-logo.png','./images/left-arrow-b.png','./images/left-arrow.png',
+                    './images/man-back.png','./images/man-front.png','./images/man-large.png','./images/map-bg.png','./images/man-font.png',
+                    './images/p3-map-new.png','./images/p4-img.png','./images/p5-image-new.png','./images/p6-image-400.png','./images/p6-image-people.png',
+                    './images/p6-image-400.png','./images/p6-image-cellphone.png','./images/p6-image.png','./images/p7-image.png','./images/page_1_bg.png','./images/women-font.png','./images/profile.png'];
+					function preloadimages(arr) {
+						var newimages = [],
+							loadedimages = 0
+						var postaction = function() {} //此处增加了一个postaction函数
+						var arr = (typeof arr != "object") ? [arr] : arr
+
+						function imageloadpost() {
+							loadedimages++
+							if (loadedimages == arr.length) {
+								postaction(newimages) //加载完成用我们调用postaction函数并将newimages数组做为参数传递进去
+							}
+						}
+						for (var i = 0; i < arr.length; i++) {
+							newimages[i] = new Image()
+							newimages[i].src = arr[i]
+							newimages[i].onload = function() {
+								imageloadpost()
+							}
+							newimages[i].onerror = function() {
+								imageloadpost()
+							}
+						}
+						return { //此处返回一个空白对象的done方法
+							done: function(f) {
+								postaction = f || postaction
+							}
+						}
+					}
+					/****启用****/
+				$(document).ready(function() {
+					var flag=true;
+					$('.sk-three-bounce').siblings().hide();
+					// $('.page3-image').hide();
+					// $('.page4-image').hide();
+					// $('.page5-image').hide();
+					// $('.page6-image').hide();
+					var mySwiper = $('.swiper-container').swiper({
+						slideActiveClass: 'active',
+						mode: 'vertical',
+						slideVisibleClass: 'visible',
+						queueEndCallbacks: true,
+						speed: 500,
+						paginationClickable: true,
+						initialSlide:0,
+						preloadImages:true,
+						updateOnImagesReady:true,
+					onImagesReady: function(){
+								if(flag){
+									$('.swiper-no-swiping').removeClass('swiper-no-swiping');
+									$('.sk-three-bounce').addClass('fadeOutUp animated');
+									$('.sk-three-bounce').siblings().show();
+									mySwiper.init(0);
+									flag=false;
+								}
+
+   						},
+						onSlideChangeEnd: function() {
+							$('html, body').animate({
+								scrollTop: 0
+							});
+							var length = $('.swiper-slide').length - 1;
+							var index = $('.swiper-container .active').index() + 1;
+							//隐藏左右按钮
+							console.log(index);
+							switch (index) {
+								case 1:
+
+									break;
+								case 2:
+
+									break;
+								case 3:
+									break;
+								case 4:
+									// $('.page3-image').hide();
+									break;
+								case 5:
+									// setTimeout(function() {
+									// 	$('.page3-image').show().addClass('zoomIn animated');
+									// }, 1300);
+									// setTimeout(function() {
+									// 	$('.page3-image').removeClass('zoomIn animated');
+									// }, 2200);
+									// $('.page4-image').hide();
+									break;
+								case 6:
+									// $('.page3-image').hide();
+									// $('.page5-image').hide();
+									// setTimeout(function() {
+									// 	$('.page4-image').show().addClass('zoomIn animated');
+									// }, 600);
+									// setTimeout(function() {
+									// 	$('.page4-image').removeClass('zoomIn animated');
+									// }, 1400);
+									break;
+								case 7:
+									// $('.page4-image').hide();
+									// $('.page6-image').hide();
+									// setTimeout(function() {
+									// 	$('.page5-image').show().addClass('zoomIn animated');
+									// }, 600);
+									// setTimeout(function() {
+									// 	$('.page5-image').removeClass('zoomIn animated');
+									// }, 1400);
+									break;
+								case 8:
+									// $('.page5-image').hide();
+									// setTimeout(function() {
+									// 	$('.page6-image').show().addClass('zoomIn animated');
+									// }, 600);
+									// setTimeout(function() {
+									// 	$('.page6-image').removeClass('zoomIn animated');
+									// }, 1400);
+									break;
+								default:
+									// $('.page3-image').hide();
+									// $('.page4-image').hide();
+									// $('.page5-image').hide();
+									// $('.page6-image').hide();
+									break;
+							}
+						}
+					});
+					var swiperNested1 = new Swiper('.swiper-nested', {
+						mode: 'horizontal',
+						slidesPerView: 1
+					})
+				});
+
+</script>
+</body>
+</html>
